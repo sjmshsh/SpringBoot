@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mybatis.mapper.UserMapper">
+    <select id="getAll" resultType="com.example.mybatis.model.UserInfo">
+        select * from userinfo
+    </select>
+
+<!--添加方法-->
+    <insert id="add">
+        insert into userinfo(username, password) values(#{username}, #{password})
+    </insert>
+
+    <insert id="add2" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        insert into userinfo(username, password) values(#{username}, #{password})
+    </insert>
+    
+    <update id=""
+</mapper>
